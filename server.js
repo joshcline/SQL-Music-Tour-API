@@ -11,7 +11,7 @@ const stagesController = require('./controllers/stages_controller')
 require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
- 
+
 // ROOT
 app.get('/', (req, res) => {
     res.status(200).json({
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     })
 })
 
-// CONTROLLERS 
+// CONTROLLERS
 app.use('/bands', bandsController)
 app.use('/events', eventsController)
 app.use('/stages', stagesController)
